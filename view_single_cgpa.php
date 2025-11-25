@@ -121,15 +121,15 @@ include "php/headertop.php";
 				</td>
 				<td>
 					<?php
-						if($sg>=3.5){
-							echo "<span style='background:purple;padding:3px 6px;color:#fff;'>Excellent";
-						}elseif($sg>=3.0 && $sg<3.5){
-							echo "<span style='background:green;padding:3px 6px;color:#fff;'>Good";
-						}elseif($sg>=2.5 && $sg<3.0){
-							echo "<span style='background:gray;padding:3px 6px;color:#fff;'>Average";
-						}else{
-							echo "<span style='background:red;padding:3px 6px;color:#fff;'>Probation";
-						}
+						if($sg >= 3.5){
+        echo "<span style='background:purple;padding:3px 6px;color:#fff;'>First Division</span>";
+    }elseif($sg >= 3.0 && $sg < 3.5){
+        echo "<span style='background:green;padding:3px 6px;color:#fff;'>Second Division</span>";
+    }elseif($sg >= 2.0 && $sg < 3.0){
+        echo "<span style='background:orange;padding:3px 6px;color:#fff;'>Third Division</span>";
+    }else{
+        echo "<span style='background:red;padding:3px 6px;color:#fff;'>Third Division</span>";
+    }
 					?>
 				</td>
 			</tr>
