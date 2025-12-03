@@ -33,7 +33,7 @@ include "php/headertop_admin.php";
 				}
 			}
 		
-		//SELECT avg(marks) as sgpa from result where st_id=10 and semester="1sr"
+
 		?>
 	<div>
 	<p style="text-align:center;color:#fff;background:purple;margin:0;padding:8px;"><?php echo "Name: ".$name."<br>Student ID: " . $stid; ?></p>
