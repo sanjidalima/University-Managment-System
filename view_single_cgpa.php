@@ -22,7 +22,7 @@ include "php/headertop.php";
 
 		<?php
 		
-		//custom function check credit hour and grade point
+		
 		function credit_hour($x){
 			if($x=="DBMS") return 3;
 			elseif($x == "DBMS Lab") return 1;
@@ -56,10 +56,10 @@ include "php/headertop.php";
 			$gp = 0;
 				
 			
-				//$get_result = $user->show_marks();
+
 				
 				$get_result = $user->view_cgpa($stid);
-				//var_dump($get_result);
+
 				if($get_result && ($get_result->num_rows)>0){
 			?>
 				
@@ -72,7 +72,7 @@ include "php/headertop.php";
 		<?php		
 				while($rows = $get_result->fetch_assoc()){
 				$i++;
-				//count total credit hour;	
+				
 				$ch = $ch + credit_hour($rows['sub']);
 
 		?>
@@ -81,7 +81,7 @@ include "php/headertop.php";
 				<td><?php echo $rows['marks']; ?></td>
 				<td>
 				<?php 
-				//set grade for individual subject
+			
 					$mark = $rows['marks'];
 					if($mark<60){echo "F";}
 					elseif($mark>=60 && $mark<70){echo "D";}
@@ -89,7 +89,7 @@ include "php/headertop.php";
 					elseif($mark>=80 && $mark<90){echo "B";}
 					elseif($mark>=90 && $mark<=100){echo "A";}
 					
-					//total grade point
+
 					$gp = $gp + (credit_hour($rows['sub']) * grade_point($rows['marks']));
 					
 				?>
